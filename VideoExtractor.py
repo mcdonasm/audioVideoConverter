@@ -34,9 +34,9 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=program_description,
                                      formatter_class=argparse.RawTextHelpFormatter)
     parser.add_argument('input_path', metavar="input_dir_path", help=input_path_description)
-    parser.add_argument('output_path', type=int, metavar="output_dir_path",
+    parser.add_argument('output_path', metavar="output_dir_path",
                         help=output_path_description)
 
     args = parser.parse_args()
 
-    main(args.path, args.desired_format)
+    main(args.input_path, args.output_path)
